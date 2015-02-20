@@ -11,12 +11,6 @@ it.  Unless you happen to have exactly the same tastes and preferences that I
 do, you _will_ need to create your own ansible roles / tweak mines.
 
 
-## How to run it
-
-```sh
-ansible-playbook workstation.yml -i <hostname-or-ip>, [--ask-pass --ask-sudo-pass -vvvv]
-```
-
 ## What it does
 
 Since I use Fedora as a workstation and the servers I need to work on are
@@ -30,9 +24,17 @@ for the Gnome3 shell as well.
 
 ## Dependencies
 
-Apart from having ansible installed on the machine you run this playbooks from,
-and your user being a sudoer on the target machine... none.
+- `ansible` installed on the local machine
+- A sudo-enabled account on the target machine
+- [If you need password for either SSH or sudo, `sshpass` installed on the
+  local machine]
 
+
+## How to run it
+
+```sh
+ansible-playbook workstation.yml -i <hostname-or-ip>, [--ask-pass --ask-sudo-pass -vvvv]
+```
 
 ## Available roles
 

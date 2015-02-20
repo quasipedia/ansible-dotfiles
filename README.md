@@ -18,8 +18,8 @@ CentOS, this ansible playbooks relies heavily on RPM's.
 
 Currently there are two playbooks: **server** and **workstation**.  _Server_
 only set console environment, and preferences / plugins for CLI commands;
-_workstation_ is a superset of _server_ and also install a number of software
-for the Gnome3 shell.
+_workstation_ is almost a superset of _server_ and install a number of software
+for the Gnome3 shell as well.
 
 
 ## Dependencies
@@ -43,7 +43,7 @@ the work progresses...
 - [ ] **antigen**: install antigen and the preference files
 - [ ] **vim**: vim settings, plugins, etc...
 - [ ] **git**: git settings, plugins, etc...
-- [ ] **ansible-util**: small ansible utils
+- [X] **ansible-util**: small ansible utils
 
 ###Workstation-specific:
 

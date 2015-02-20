@@ -1,0 +1,4 @@
+---
+
+- name: Install ansible-role script
+  copy: src=ansible-role.sh dest=/home/{{ ansible_ssh_user }}/bin/ansible-role mode=700

@@ -35,6 +35,7 @@ the work progresses...
 
 ###General:
 
+- [X] **ansible-runner**: make sure sshpass is installed
 - [ ] **ansible-target**: make sure python binding for selinux are installed
 - [ ] **remote**: set up SSH to work without requiring a password
 - [ ] **colemak-user**: set the colemak as default layout for the user

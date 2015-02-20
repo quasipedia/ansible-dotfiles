@@ -1,10 +1,5 @@
 ---
 
-- hosts: 127.0.0.1
-  connection: local
-  roles:
-   - role: ansible-runner
-
 - hosts: all
   vars_prompt:
       ssh_keys_install: "Would you like to append this local machine's SSH key as `authorized_key` on the target system? [yes/no]"

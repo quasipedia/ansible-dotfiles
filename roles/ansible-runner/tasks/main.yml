@@ -1,6 +1,0 @@
----
-
-- name: Install sshpass on the local machine
-  sudo: yes
-  yum: name=sshpass state=present
-

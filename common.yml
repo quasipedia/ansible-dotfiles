@@ -2,9 +2,14 @@
 
 - hosts: all
   vars_prompt:
-      ssh_keys_install: "Would you like to append this local machine's SSH key as `authorized_key` on the target system? [yes/no]"
+    ssh_keys_install: "Would you like to append this local machine's SSH key as `authorized_key` on the target system? [yes/no]"
+  vars:
+    git_user_name: Mac Ryan
+    git_user_email: quasipedia@gmail.com
   roles:
     - role: ansible-target
     - role: ssh-keys
     - role: zsh
+    - role: python
+    - role: git
     - role: ansible-util

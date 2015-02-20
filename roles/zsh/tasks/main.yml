@@ -1,0 +1,9 @@
+---
+
+- name: Install zsh
+  sudo: yes
+  yum: name=zsh state=latest
+
+- name: Set up zsh as default shell
+  sudo: yes
+  shell: chsh -s `which zsh` {{ ansible_ssh_user }}

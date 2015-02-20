@@ -54,4 +54,4 @@ the work progresses...
 
 ###Server-specific:
 
-- [ ]**epel**: install the EPEL repo
+- [ ] **epel**: install the EPEL repo

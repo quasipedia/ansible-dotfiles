@@ -43,21 +43,20 @@ the work progresses...
 
 ###General:
 
-- [X] **ansible-runner**: make sure sshpass is installed
 - [X] **ansible-target**: make sure python binding for selinux are installed
 - [X] **ssh-keys**: set up SSH to work without requiring a password
+- [ ] **colemak-user**: set the colemak as default layout for the user
 - [X] **zsh**: install and set up ZSH as the default shell for user
 - [X] **python**: install both python 2 and 3 + pip, wheel, virtualenv...
 - [X] **git**: git settings, plugins, etc...
 - [ ] **antigen**: install antigen and the preference files
 - [ ] **localbin-path**: make sure .local/bin is in the user's $PATH
-- [ ] **colemak-user**: set the colemak as default layout for the user
-- [ ] **colemak-host**: set colemak as the default layout for the machine
 - [ ] **vim**: vim settings, plugins, etc...
 - [X] **ansible-util**: small ansible utils
 
 ###Workstation-specific:
 
+- [ ] **colemak-host**: set colemak as the default layout for the machine
 - [ ] **fusion**: install the fusion repo
 - [ ] **boxes-util**: install a small utility for SSH into gnome-boxes VM's
 - [ ] **fedy**: install fedy

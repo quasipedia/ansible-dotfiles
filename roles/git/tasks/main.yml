@@ -1,0 +1,15 @@
+---
+
+- name: Install git, git-extras
+  sudo: yes
+  yum: name={{ item }} state=latest
+  with_items:
+    - git
+    - git-extras
+
+- name: Install git-up
+  sudo: yes
+  pip: name=git-up state=latest
+
+- name: Configure git
+  template: src=gitconfig dest=/home/{{ ansible_ssh_user }}/.gitconfig backup=yes

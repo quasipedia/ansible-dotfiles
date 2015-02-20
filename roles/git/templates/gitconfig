@@ -1,0 +1,57 @@
+[user]
+  email = {{ git_user_email }}
+  name = {{ git_user_name }}
+
+[push]
+  default = current
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+;[color "status"]
+;  added = yellow
+;  changed = green
+;  untracked = cyan
+
+[color]
+  ui = true
+
+[alias]
+  branch-name = !git for-each-ref --format='%(refname:short)' `git symbolic-ref HEAD`
+  c = commit --verbose
+  diffs = diff --stat
+  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  pu = !git push --set-upstream origin `git branch-name`
+  s = status --short
+  smp = submodule foreach git pull origin master
+  smu = submodule update --init
+  co = checkout
+  publish = push -u origin `git branch-name`
+  whatadded = log --diff-filter=A
+  conflicts = !git diff --name-only --diff-filter=U | cat
+
+[rerere]
+  enabled = 1
+
+[pull]
+  rebase = true
+
+[merge]
+  ff = false
+  stat = true
+
+[rebase]
+  stat = true

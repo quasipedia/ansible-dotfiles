@@ -11,6 +11,12 @@ it.  Unless you happen to have exactly the same tastes and preferences that I
 do, you _will_ need to create your own ansible roles / tweak mines.
 
 
+## How to run it
+
+```sh
+ansible-playbook workstation.yml -i <your-host-name-or-ip-here>, --ask-pass
+```
+
 ## What it does
 
 Since I use Fedora as a workstation and the servers I need to work on are

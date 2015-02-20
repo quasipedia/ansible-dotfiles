@@ -14,7 +14,7 @@ do, you _will_ need to create your own ansible roles / tweak mines.
 ## How to run it
 
 ```sh
-ansible-playbook workstation.yml -i <your-host-name-or-ip-here>, --ask-pass
+ansible-playbook workstation.yml -i <hostname-or-ip>, --ask-pass --ask-sudo-pass
 ```
 
 ## What it does
@@ -42,7 +42,7 @@ the work progresses...
 ###General:
 
 - [X] **ansible-runner**: make sure sshpass is installed
-- [ ] **ansible-target**: make sure python binding for selinux are installed
+- [X] **ansible-target**: make sure python binding for selinux are installed
 - [ ] **remote**: set up SSH to work without requiring a password
 - [ ] **colemak-user**: set the colemak as default layout for the user
 - [ ] **colemak-host**: set colemak as the default layout for the machine

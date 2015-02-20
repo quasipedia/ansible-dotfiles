@@ -1,0 +1,11 @@
+---
+
+- hosts: 127.0.0.1
+  connection: local
+  roles:
+   - role: ansible-runner
+
+- hosts: all
+  roles:
+    - role: ansible-target
+    - role: ansible-util

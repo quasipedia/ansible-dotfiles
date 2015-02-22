@@ -61,6 +61,7 @@ the work progresses...
 - [ ] **boxes-util**: install a small utility for SSH into gnome-boxes VM's
 - [ ] **fedy**: install fedy
 - [ ] **graphics**: install proprietary graphic drivers
+- [ ] **sublime**: install sublime text
 
 ###Server-specific:
 

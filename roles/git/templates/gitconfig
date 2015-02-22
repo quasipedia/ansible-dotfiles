@@ -3,7 +3,7 @@
   name = {{ git_user_name }}
 
 [push]
-  default = current
+  default = {{ git_push_default }}
 
 [color]
   branch = auto
@@ -30,18 +30,26 @@
   ui = true
 
 [alias]
-  branch-name = !git for-each-ref --format='%(refname:short)' `git symbolic-ref HEAD`
-  c = commit --verbose
-  diffs = diff --stat
-  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  pu = !git push --set-upstream origin `git branch-name`
-  s = status --short
-  smp = submodule foreach git pull origin master
-  smu = submodule update --init
-  co = checkout
-  publish = push -u origin `git branch-name`
-  whatadded = log --diff-filter=A
+  b         = branch
+  c         = commit --verbose
+  ca        = commit --amend --reuse-message=HEAD
+  ci        = commit
+  cl        = clone
+  cleanse   = "!git ls-files --others --exclude-standard | xargs rm"
+  co        = checkout
   conflicts = !git diff --name-only --diff-filter=U | cat
+  diffs     = diff --stat
+  fix       = grep --heading --break --ignore-case -e 'FIX:' -e 'FIXME:'
+  g         = grep -n
+  l         = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  pu        = !git push --set-upstream origin `git branch-name`
+  publish   = push -u origin `git branch-name`
+  root      = !cd $(git rev-parse --show-toplevel)
+  s         = status --short
+  smp       = submodule foreach git pull origin master
+  smu       = submodule update --init
+  todo      = grep --heading --break --ignore-case -e 'FIX:' -e 'FIXME:'
+  whatadded = log --diff-filter=A
 
 [rerere]
   enabled = 1

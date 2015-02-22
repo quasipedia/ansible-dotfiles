@@ -2,3 +2,4 @@
 
 git_user_name: Some User
 git_user_email: somebody@example.com
+git_push_default: simple

@@ -1,0 +1,10 @@
+---
+
+- name: Installing the comlemak keymap file (CentOS only)
+  sudo: yes
+  copy: src=colemak.map.gz dest=/lib/kbd/keymaps/i386/qwerty/
+  when:
+    - ansible_distribution == 'CentOS'
+
+- include: default-local.yml
+  when: colemak_default == 'local'

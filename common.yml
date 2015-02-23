@@ -10,6 +10,7 @@
     - role: ansible-target
     - role: ssh-keys
     - role: zsh
+    - role: colemak
     - role: python
     - role: git
     - role: ansible-util

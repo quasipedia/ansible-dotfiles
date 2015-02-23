@@ -1,0 +1,17 @@
+---
+
+- name: Creating a loadkeys group
+  sudo: yes
+  group: name=loadkeys state=present
+
+- name: Setting group loadkeys to loadkeys binary
+  sudo: yes
+  shell: chgrp loadkeys `which loadkeys`
+
+- name: Adding {{ ansible_ssh_user }} to the 'loadkeys' group
+  sudo: yes
+  command: sudo gpasswd -a {{ ansible_ssh_user }} loadkeys
+
+- name: Chmodding loadkeys
+  sudo: yes
+  command: chmod 4750 `which loadkeys`

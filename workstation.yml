@@ -1,4 +1,6 @@
 ---
 
 - hosts: all
+  vars:
+    - colemak_default: global
   include: common.yml

@@ -11,17 +11,6 @@ it.  Unless you happen to have exactly the same tastes and preferences that I
 do, you _will_ need to create your own ansible roles / tweak mines.
 
 
-## What it does
-
-Since I use Fedora as a workstation and the servers I need to work on are
-CentOS, this ansible playbooks relies heavily on RPM's.
-
-Currently there are two playbooks: **server** and **workstation**.  _Server_
-only set console environment, and preferences / plugins for CLI commands;
-_workstation_ is almost a superset of _server_ and install a number of software
-for the Gnome3 shell as well.
-
-
 ## Dependencies
 
 - `ansible` installed on the local machine
@@ -33,8 +22,27 @@ for the Gnome3 shell as well.
 ## How to run it
 
 ```sh
-ansible-playbook workstation.yml -i <hostname-or-ip>, [--ask-pass --ask-sudo-pass -vvvv]
+ansible-playbook <playbook> -i <hostname-or-ip>, [--ask-pass --ask-sudo-pass -vvvv]
 ```
+
+## Available playbooks
+
+Since I use Fedora as a workstation and the servers I need to work on are
+CentOS, this ansible playbooks relies heavily on RPM's.
+
+Currently there are three playbooks:
+
+- **create-user**: This is a self-contained playbook rarely used on those
+  system when a user need to be created by root after installation (currently:
+  only legacy CentOS versions)
+- **server**: sets console environment, preferences, plugins for CLI
+  commands...
+- **workstation**: almost a superset of _server_, also installs a number of
+  software for the Gnome3 shell as well.
+
+_server_ and _workstation_ depends from a playbook _common_ that can (but
+shuold not) be run on its own.
+
 
 ## Available roles
 

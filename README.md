@@ -21,9 +21,19 @@ do, you _will_ need to create your own ansible roles / tweak mines.
 
 ## How to run it
 
+The general syntax is:
+
 ```sh
-ansible-playbook <playbook> -i <hostname-or-ip>, [--ask-pass --ask-sudo-pass -vvvv]
+ansible-playbook <playbook> -i <hostname-or-ip>, [--user=<user> --ask-pass --ask-sudo-pass -vvvv]
 ```
+
+Examples:
+
+```sh
+ansible-playbook create-user.yml -i 192.168.122.102, --user=root --ask-pass
+ansible-playbook workstation.yml -i 192.168.122.102, -vvvv
+```
+
 
 ## Available playbooks
 

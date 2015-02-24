@@ -1,0 +1,23 @@
+---
+
+- hosts: all
+  vars_prompt:
+
+    - name: account_password
+      prompt: Enter password for new account
+      private: yes
+      encrypt: "sha512_crypt"
+      confirm: yes
+      salt_size: 7
+
+  roles:
+
+    - ansible-target
+
+  tasks:
+
+    - name: Create user
+      user: name=mac comment="Mac Ryan" group=wheel password={{ account_password }}
+
+    - name: Modify the `sudoers` file (sudo NOPASSWD)
+      lineinfile: "dest=/etc/sudoers state=present regexp='^%wheel' line='%wheel ALL=(ALL) NOPASSWD: ALL' validate='visudo -cf %s' backup=yes"

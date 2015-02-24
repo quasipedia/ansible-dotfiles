@@ -14,4 +14,4 @@
 
 - name: Chmodding loadkeys
   sudo: yes
-  command: chmod 4750 `which loadkeys`
+  shell: chmod 4750 `which loadkeys`

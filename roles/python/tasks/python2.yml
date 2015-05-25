@@ -1,0 +1,20 @@
+---
+
+- name: Install python2 yum pacakges
+  sudo: yes
+  yum: name={{ item }} state=latest
+  with_items:
+    - python
+    - python-setuptools
+
+- name: Install pip2
+  sudo: yes
+  command: easy_install pip
+
+- name: Install pip2 packages
+  sudo: yes
+  pip: name={{ item }} executable=/usr/bin/pip2 state=latest
+  with_items:
+    - wheel
+    - virtualenv
+    - virtualenvwrapper

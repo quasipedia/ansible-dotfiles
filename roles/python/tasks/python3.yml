@@ -1,0 +1,26 @@
+---
+
+- name: Try to install python3 yum pacakges
+  sudo: yes
+  ignore_errors: true
+  yum: name={{ item }} state=latest
+  with_items:
+    - python3
+    - python3-setuptools
+  notify:
+    - Install pip3
+    - Install pip3 packages
+
+- name: Install pip3
+  sudo: yes
+  ignore_errors: true
+  command: easy_install-{{ python_3_version }} pip
+
+- name: Install pip3 packages
+  sudo: yes
+  ignore_errors: true
+  pip: name={{ item }} executable=/usr/bin/pip3 state=latest
+  with_items:
+    - wheel
+    - virtualenv
+    - virtualenvwrapper

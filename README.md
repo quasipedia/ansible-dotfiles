@@ -38,7 +38,7 @@ ansible-playbook workstation.yml -i 192.168.122.102, -vvvv
 ## Available playbooks
 
 Since I use Fedora as a workstation and the servers I need to work on are
-CentOS, this ansible playbooks relies heavily on RPM's.
+CentOS, these ansible playbooks relies heavily on RPM's.
 
 Currently there are three playbooks:
 
@@ -51,7 +51,7 @@ Currently there are three playbooks:
   software for the Gnome3 shell as well.
 
 _server_ and _workstation_ depends from a playbook _common_ that can (but
-shuold not) be run on its own.
+should not) be run on its own.
 
 
 ## Available roles
@@ -79,7 +79,7 @@ the work progresses...
 - [ ] **boxes-util**: install a small utility for SSH into gnome-boxes VM's
 - [ ] **fedy**: install fedy
 - [ ] **graphics**: install proprietary graphic drivers
-- [ ] **sublime**: install sublime text
+- [ ] **atom**: install atom and all relevant plugins
 
 ###Server-specific:
 
